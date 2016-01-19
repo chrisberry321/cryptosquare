@@ -1,16 +1,34 @@
-// //Business Logic
-//
-// var leapYear = function(year) {
-//
-// 	// return ((year % 4 === 0) && (year % 100 != 0) || (year % 400 === 0));
-//
-// 	if ( year > 0 && ((year % 4 === 0) && (year % 100 !== 0)|| (year % 400 === 0))) {
-// 		return true;
-// 	} else if (year === NaN) {
-// 		return false;
-// 	} else {
-// 		return false;
-// 	}
+//Business Logic
+
+string = "abctofhr23";
+
+Sanitize = function(string) {
+	return string.replace(/[^a-zA-Z0-9]/g, "");
+};
+
+downCase = function(string) {
+	return string.toLowerCase();
+};
+
+stringLength = function(string) {
+	return string.length;
+};
+
+row = function(string) {
+	return Math.floor(Math.sqrt(string.length));
+}
+
+col = function(string) {
+	return Math.ceil((string.length) / (Math.floor(Math.sqrt(string.length))));
+}
+
+// if ( year > 0 && ((year % 4 === 0) && (year % 100 !== 0)|| (year % 400 === 0))) {
+	// 	return true;
+	// } else if (year === NaN) {
+	// 	return false;
+	// } else {
+	// 	return false;
+	// }
 
 	// if (year % 100 === 0) {
 	// 	return false;

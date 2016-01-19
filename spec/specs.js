@@ -4,10 +4,35 @@
 // string as its first argument, too. The second argument is
 // the function which contains the assertion.
 
-// describe ('leapYear', function() {
-// 	it("is false for a year that is not divisible by 4, 100, or 400", function() {
-// 		expect(leapYear(1993)).to.equal(false);
-// 	});
+describe ('Sanitize', function() {
+	it("sanitize string to remove all non-alphanumeric characters", function() {
+		expect(Sanitize("I like to eat cheese!")).to.equal("Iliketoeatcheese");
+});
+});
+
+describe ('downCase', function() {
+	it ("sets all characters to lowercase", function() {
+		expect(downCase("I NEED to eat MORE cheese")).to.equal("i need to eat more cheese");
+});
+});
+
+describe ('stringLength', function() {
+	it ("counts the number of characters in a string", function() {
+		expect(stringLength("hello bob")).to.equal(9);
+});
+});
+
+describe ('row', function() {
+	it ("gives the square root of the number of characters", function() {
+		expect(row("weneedmore")).to.equal(3);
+	});
+});
+
+describe ('col', function() {
+	it ("gives the square root of the number of characters", function() {
+		expect(col("abctofhr23")).to.equal(4);
+	});
+});
 //
 // 	it ("is true for years divisible by 4", function() {
 // 		expect(leapYear(2004)).to.equal(true);
@@ -28,4 +53,3 @@
 // 	it ("is false for negavtive integers", function() {
 // 		expect (leapYear(-400)).to.equal(false);
 // 	});
-// });
