@@ -1,6 +1,10 @@
 //Business Logic
 
 string = "abctofhr23";
+newstring = string.split("");
+test = "";
+
+
 
 Sanitize = function(string) {
 	return string.replace(/[^a-zA-Z0-9]/g, "");
@@ -21,6 +25,22 @@ row = function(string) {
 col = function(string) {
 	return Math.ceil((string.length) / (Math.floor(Math.sqrt(string.length))));
 }
+
+
+for (var index = 1; index <= 4; index += 1) {
+	test += newstring.shift();
+}
+test += "\n";
+index = 1
+for (var index = 1; index <= 4; index += 1) {
+	test += newstring.shift();
+}
+test += "\n";
+index = 1
+for (var index = 1; index <= 2; index += 1) {
+	test += newstring.shift();
+}
+
 
 // if ( year > 0 && ((year % 4 === 0) && (year % 100 !== 0)|| (year % 400 === 0))) {
 	// 	return true;
